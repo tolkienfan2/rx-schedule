@@ -105,3 +105,65 @@ a {
     color-scheme: dark;
   }
 }
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.sun {
+  grid-column: 1;
+}
+
+.mon {
+  grid-column: 2;
+}
+
+.tue {
+  grid-column: 3;
+}
+
+.wed {
+  grid-column: 4;
+}
+
+.thu {
+  grid-column: 5;
+}
+
+.fri {
+  grid-column: 6;
+}
+
+.sat {
+  grid-column: 7;
+}
+
+.week0 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.week1 {
+  grid-row: 1;
+}
+
+.week2 {
+  grid-row: 2;
+}
+
+.week3 {
+  grid-row: 3;
+}
+
+.week4 {
+  grid-row: 4;
+}
+
+.week5 {
+  grid-row: 5;
+}
