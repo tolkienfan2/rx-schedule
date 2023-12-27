@@ -2,7 +2,7 @@ import React from "react";
 
 type DayBoxProps = {
     day: string;
-    date: number;
+    date: number | null;
 
 }
 
