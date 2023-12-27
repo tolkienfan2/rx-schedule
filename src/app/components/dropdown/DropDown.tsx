@@ -4,9 +4,6 @@ import styles from './dropdown.module.css';
 import DropDownMenu from "./DropDownMenu";
 import Trigger from "./Trigger";
 import useDropdown from "./useDropdown";
-import useMonth from "../useMonth";
-import useYear from "../useYear";
-import useScheduler from "../useScheduler";
 
 export type DropDownProps = {
     items: string[];
