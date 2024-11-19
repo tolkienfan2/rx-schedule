@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './dropdown.module.css';
+import styles from '../../css/dropdown.module.css';
 
 const Trigger = ({ label, onClick }: {
     label: string;

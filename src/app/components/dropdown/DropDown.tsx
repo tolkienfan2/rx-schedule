@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import styles from './dropdown.module.css';
+import styles from '../../css/dropdown.module.css';
 import DropDownMenu from "./DropDownMenu";
 import Trigger from "./Trigger";
 import useDropdown from "./useDropdown";

@@ -1,5 +1,7 @@
 "use client";
 import React, { useEffect, useCallback } from "react";
+import styles from '../css/calendar.module.css';
+import { PharmacyInfo } from "./PharmacyInfo";
 import HeaderBox from "./HeaderBox";
 import DayBox from "./DayBox";
 import { Placeholder } from "./Placeholder";
@@ -7,7 +9,7 @@ import DropDown from "./dropdown/DropDown";
 import useMonth from "./useMonth";
 import useYear from "./useYear";
 import useScheduler from "./useScheduler";
-import { months, days, headers, years, calendarPlaceholder } from "../constants";
+import { months, days, headers, years, calendarPlaceholder, namePlaceholder, locationPlaceholder } from "../constants";
 
 export const Calendar = () => {
     const { selectedMonth, setMonth } = useMonth();
@@ -36,8 +38,18 @@ export const Calendar = () => {
 
     return (
         <>
-        <DropDown items={months} triggerLabel="Month" setSelection={setMonth} />
-        <DropDown items={years} triggerLabel="Year" setSelection={setYear} />
+        <div className={styles.panel}>
+            <div className={styles.panelItem}>
+                <PharmacyInfo label={namePlaceholder} />
+            </div>
+            <div className={styles.panelItem}>
+                <PharmacyInfo label={locationPlaceholder} />
+            </div>
+            <div className={styles.panelItem}>
+                <DropDown items={months} triggerLabel="Month" setSelection={setMonth} />
+                <DropDown items={years} triggerLabel="Year" setSelection={setYear} />
+            </div>
+        </div>
         {calendarNotSet ?
             <Placeholder placeholderText={calendarPlaceholder} /> :
             <div className="calendar">

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './dropdown.module.css';
+import styles from '../../css/dropdown.module.css';
 
 const DropDownMenu = ({ items, selectedIndex, onItemClick, toggleOpen }: {
     items: string[];
